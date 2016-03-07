@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<mvcSiteMap xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xmlns="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0"
+            xsi:schemaLocation="http://mvcsitemap.codeplex.com/schemas/MvcSiteMap-File-4.0 MvcSiteMapSchema.xsd">
+
+  <mvcSiteMapNode title="Home" controller="Home"  visibility="false"  action="Index">
+    <mvcSiteMapNode title="About" controller="Home" action="About"/>
+    <mvcSiteMapNode title="Contact" controller="Home" action="Contact"/>
+    <mvcSiteMapNode title="Admin" clickable="false" roles="Administrator">
+      <mvcSiteMapNode title="Manage Admin" controller="Admin" action="Index" area="AdminArea">
+        <mvcSiteMapNode title="New Admin" area="" action="NewAdmin" controller="Account" visibility="SiteMapPathHelper,!*" />
+        <mvcSiteMapNode title="Edit Admin" area="" action="EditAdmin"  controller="Account" preservedRouteParameters="id"  visibility="SiteMapPathHelper,!*" >
+          <mvcSiteMapNode title="More Details" area="AdminArea" action="MoreDetails" controller="Admin" key="Admin_MoreDetails" preservedRouteParameters="adminId" visibility="SiteMapPathHelper,!*" />
+        </mvcSiteMapNode>
+      </mvcSiteMapNode>
+    </mvcSiteMapNode>
+
+    <mvcSiteMapNode title="Manage Account" controller="Manage" action="Index" visibility="SiteMapPathHelper,!*">
+      <mvcSiteMapNode title="Change Password" action="ChangePassword" />
+    </mvcSiteMapNode>
+  </mvcSiteMapNode>
+</mvcSiteMap>

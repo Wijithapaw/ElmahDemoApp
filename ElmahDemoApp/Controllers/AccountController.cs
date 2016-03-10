@@ -202,6 +202,8 @@ namespace ElmahDemoApp.Controllers
                     LastUpdatedDateUtc = DateTime.UtcNow
                 };
 
+                admin = null;
+
                 var result = await UserManager.CreateAsync(admin, "Admin123 (This should be a very long password which is hard to guess)");
 
                 if (result.Succeeded)

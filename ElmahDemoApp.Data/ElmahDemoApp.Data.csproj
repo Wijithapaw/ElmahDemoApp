@@ -70,6 +70,10 @@
     <Compile Include="Migrations\201602181413316_AddedBaseEntityToTrackAuditData.Designer.cs">
       <DependentUpon>201602181413316_AddedBaseEntityToTrackAuditData.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201603091018292_ElmahDBChanges.cs" />
+    <Compile Include="Migrations\201603091018292_ElmahDBChanges.Designer.cs">
+      <DependentUpon>201603091018292_ElmahDBChanges.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -94,6 +98,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602181413316_AddedBaseEntityToTrackAuditData.resx">
       <DependentUpon>201602181413316_AddedBaseEntityToTrackAuditData.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201603091018292_ElmahDBChanges.resx">
+      <DependentUpon>201603091018292_ElmahDBChanges.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
